@@ -16,6 +16,7 @@ $about-box-width: 350px;
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
+      position: relative;
       &:after {
         content: "";
         position: absolute;
@@ -40,11 +41,11 @@ $about-box-width: 350px;
 @mixin mediaSm {
   @media only screen and (max-width: 500px) {
     .text-secondary {
-      color: red;
+      color: $secondary-color;
     }
     .header-menu {
       .menu-btn {
-        font-size: 16px;
+        font-size: 15px;
         padding: 0px 17px;
       }
     }
@@ -52,16 +53,17 @@ $about-box-width: 350px;
     .header-flex-container {
       height: 6vh;
     }
+
     .about-main-container-for-data {
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-end;
     }
     .about {
       .Heading {
-        margin-top: 4rem;
-        margin-left: 2rem;
-        margin-right: 0rem;
-        margin-bottom: 0rem;
+        // margin-top: 4rem;
+        // margin-left: 2rem;
+        // margin-right: 0rem;
+        // margin-bottom: 0rem;
       }
 
       .bio-description {
@@ -73,6 +75,7 @@ $about-box-width: 350px;
       }
       .bio {
         flex-direction: column;
+        align-items: center;
         span {
           margin-top: 2rem;
         }

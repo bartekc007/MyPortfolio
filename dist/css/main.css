@@ -4,12 +4,13 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden; }
+  overflow-x: hidden; }
   body#bd-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    position: relative; }
     body#bd-img:after {
       content: "";
       position: absolute;
@@ -118,7 +119,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 85vh;
   justify-content: flex-start; }
 
 .main-container-for-data {
@@ -161,8 +162,7 @@ h3 {
   display: flex;
   flex-direction: column; }
   .about .about-main-container-for-data {
-    display: flex;
-    justify-content: flex-start; }
+    display: flex; }
   .about .Heading {
     margin-top: 2rem;
     margin-left: 9rem; }
@@ -178,8 +178,7 @@ h3 {
     justify-content: space-evenly;
     flex-direction: row;
     position: relative;
-    margin-top: 2rem;
-    height: 300px; }
+    margin-top: 2rem; }
   .about .skills {
     width: 350px;
     background: rgba(68, 68, 68, 0.6);
@@ -188,20 +187,15 @@ h3 {
 
 @media only screen and (max-width: 500px) {
   .text-secondary {
-    color: red; }
+    color: #d1a61a; }
   .header-menu .menu-btn {
-    font-size: 16px;
+    font-size: 15px;
     padding: 0px 17px; }
   .header-flex-container {
     height: 6vh; }
   .about-main-container-for-data {
     flex-direction: column;
-    justify-content: center; }
-  .about .Heading {
-    margin-top: 4rem;
-    margin-left: 2rem;
-    margin-right: 0rem;
-    margin-bottom: 0rem; }
+    align-items: flex-end; }
   .about .bio-description {
     margin-top: 2rem;
     margin-left: 2rem;
@@ -211,7 +205,8 @@ h3 {
     padding: 0.5rem;
     border-bottom: #d1a61a 5px solid; }
   .about .bio {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     .about .bio span {
       margin-top: 2rem; } }
 
