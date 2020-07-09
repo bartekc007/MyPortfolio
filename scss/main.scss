@@ -1,5 +1,5 @@
-@import "config";
-@import "mobile";
+@import "_config";
+@import "_mobile";
 * {
   //box-sizing: border-box;
 }
@@ -41,7 +41,7 @@ body {
     background: linear-gradient(
       to right,
       transparent,
-      rgb(127, 46, 151),
+      $secondary-color,
       transparent
     );
     animation: animate1 6s linear infinite;
@@ -65,7 +65,7 @@ body {
     background: linear-gradient(
       to bottom,
       transparent,
-      rgb(127, 46, 151),
+      $secondary-color,
       transparent
     );
     animation: animate2 6s linear infinite;
@@ -89,7 +89,7 @@ body {
     background: linear-gradient(
       to left,
       transparent,
-      rgb(127, 46, 151),
+      $secondary-color,
       transparent
     );
     animation: animate3 6s linear infinite;
@@ -113,7 +113,7 @@ body {
     background: linear-gradient(
       to top,
       transparent,
-      rgb(127, 46, 151),
+      $secondary-color,
       transparent
     );
     animation: animate4 6s linear infinite;
@@ -220,3 +220,9 @@ h3 {
 .text-secondary {
   color: $secondary-color;
 }
+
+@include mediaSm();
+@include mediaMd();
+@include mediaLg();
+@include mediaXl();
+@include mediaXXl();

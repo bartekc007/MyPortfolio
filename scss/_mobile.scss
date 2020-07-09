@@ -1,11 +1,61 @@
-// widescreens
-@include mediaXL {
+// Media Query Mixins
+@mixin mediaSm {
+  @media only screen and (max-width: 500px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 16px;
+        padding: 0px 17px;
+      }
+    }
+
+    .header-flex-container {
+      height: 6vh;
+    }
+  }
 }
-// DEsktop & lsptops
-@include mediaLg {
+@mixin mediaMd {
+  @media only screen and (min-width: 501px) and (max-width: 791px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 16px;
+        padding: 0px 17px;
+      }
+    }
+    .header-flex-container {
+      height: 8vh;
+    }
+  }
 }
-Tablets & small laptops @include mediaMd {
+@mixin mediaLg {
+  @media only screen and (min-width: 792px) and (max-width: 837px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 20px;
+        padding: 0px 23px;
+      }
+    }
+    .header-flex-container {
+      height: 12vh;
+    }
+  }
 }
-// smartphones
-@include mediaSm {
+@mixin mediaXl {
+  @media only screen and (min-width: 838px) and (max-width: 1170px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 20px;
+        padding: 0px 30px;
+      }
+    }
+    .header-flex-container {
+      height: 12vh;
+    }
+  }
+}
+@mixin mediaXXl {
+  @media only screen and (min-width: 1171px) {
+    .text-secondary {
+      color: $secondary-color;
+    }
+  }
 }
