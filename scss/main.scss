@@ -1,11 +1,12 @@
 @import "_config";
-@import "_mobile";
+
 * {
   //box-sizing: border-box;
 }
 body {
   @include background;
   background: $primary-color;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -173,7 +174,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  color: #fff;
+  //color: #fff;
   justify-content: flex-start;
   //background: red;
 }
@@ -221,8 +222,42 @@ h3 {
   color: $secondary-color;
 }
 
-@include mediaSm();
-@include mediaMd();
-@include mediaLg();
-@include mediaXl();
-@include mediaXXl();
+//about.html
+
+.about {
+  display: flex;
+  flex-direction: column;
+
+  .about-main-container-for-data {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .Heading {
+    margin-top: 2rem;
+    margin-left: 9rem;
+  }
+
+  .bio-description {
+    margin-top: 2rem;
+    margin-left: 7rem;
+    margin-right: 11rem;
+    @include about-box-styling();
+  }
+
+  .bio {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: relative;
+    margin-top: 2rem;
+    height: 300px;
+  }
+
+  .skills {
+    width: $about-box-width;
+    @include about-box-styling();
+  }
+}
+
+@import "_mobile";

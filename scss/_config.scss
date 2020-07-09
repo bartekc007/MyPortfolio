@@ -3,6 +3,7 @@ $secondary-color: rgb(209, 166, 26);
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.6;
+$about-box-width: 350px;
 
 @mixin easeout {
   transition: all 0.5s ease-out;
@@ -25,6 +26,139 @@ $background-opacity: 0.6;
         height: 100%;
         background: rgba($primary-color, $background-opacity);
       }
+    }
+  }
+}
+
+@mixin about-box-styling {
+  background: rgba($primary-color, $background-opacity);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media only screen and (max-width: 500px) {
+    .text-secondary {
+      color: red;
+    }
+    .header-menu {
+      .menu-btn {
+        font-size: 16px;
+        padding: 0px 17px;
+      }
+    }
+
+    .header-flex-container {
+      height: 6vh;
+    }
+    .about-main-container-for-data {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about {
+      .Heading {
+        margin-top: 4rem;
+        margin-left: 2rem;
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+      }
+
+      .bio-description {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 0rem;
+        @include about-box-styling();
+      }
+      .bio {
+        flex-direction: column;
+        span {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+@mixin mediaMd {
+  @media only screen and (min-width: 501px) and (max-width: 791px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 16px;
+        padding: 0px 17px;
+      }
+    }
+    .header-flex-container {
+      height: 8vh;
+    }
+  }
+}
+@mixin mediaLg {
+  @media only screen and (min-width: 792px) and (max-width: 837px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 20px;
+        padding: 0px 23px;
+      }
+    }
+    .header-flex-container {
+      height: 12vh;
+    }
+    .text-secondary {
+      color: blue;
+    }
+    .about {
+      .skills {
+        width: 300px;
+      }
+      .about-main-container-for-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .Heading {
+        margin-top: 0rem;
+        margin-left: 0rem;
+        width: 500px;
+      }
+    }
+  }
+}
+@mixin mediaXl {
+  @media only screen and (min-width: 838px) and (max-width: 1170px) {
+    .header-menu {
+      .menu-btn {
+        font-size: 20px;
+        padding: 0px 30px;
+      }
+    }
+    .header-flex-container {
+      height: 12vh;
+    }
+    .text-secondary {
+      color: green;
+    }
+    .about {
+      .skills {
+        width: 260px;
+      }
+      .about-main-container-for-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .Heading {
+        margin-top: 0rem;
+        margin-left: 0rem;
+        width: 500px;
+      }
+    }
+  }
+}
+@mixin mediaXXl {
+  @media only screen and (min-width: 1171px) {
+    .text-secondary {
+      color: $secondary-color;
     }
   }
 }
