@@ -9,6 +9,9 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
@@ -173,7 +176,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: 100%;
+  width: 100%;
   //color: #fff;
   justify-content: flex-start;
   //background: red;
@@ -230,7 +234,6 @@ h3 {
 
   .about-main-container-for-data {
     display: flex;
-    //justify-content: flex-start;
   }
 
   .Heading {
@@ -242,7 +245,6 @@ h3 {
     margin-top: 2rem;
     margin-left: 7rem;
     margin-right: 11rem;
-    @include about-box-styling();
   }
 
   .bio {
@@ -251,11 +253,8 @@ h3 {
     flex-direction: row;
     position: relative;
     margin-top: 2rem;
-    //height: 300px;
   }
-
   .skills {
-    width: $about-box-width;
     @include about-box-styling();
   }
 }
