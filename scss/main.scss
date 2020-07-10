@@ -1,16 +1,23 @@
 @import "_config";
 
 * {
-  //box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+html {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
 body {
   @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
-  margin: 0;
+  margin: 0px;
   position: absolute;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
@@ -175,7 +182,7 @@ body {
 .main-flex-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: ;
   height: 100%;
   width: 100%;
   //color: #fff;
@@ -188,6 +195,8 @@ body {
   height: 500px;
   width: 100vh;
   padding: 2rem 4rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
 
   a {
     color: #fff;
@@ -259,4 +268,79 @@ h3 {
   }
 }
 
+.work {
+  .Heading {
+    margin-top: 2rem;
+    margin-left: 8rem;
+  }
+  .projects-main-container-for-data {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-secondary {
+    color: $secondary-color;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
+    img {
+      height: 280px;
+      width: 280px;
+      margin-left: 10px;
+    }
+    .card {
+      position: relative;
+      color: #000;
+      max-width: 330px;
+      height: 290px;
+      background: #fff;
+      margin: 30px 10px;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+      transition: 0.3s ease-in-out;
+      border-bottom: 5px $secondary-color solid;
+      .imgBx {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        top: -50px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+      .content {
+        position: relative;
+        margin-top: -190px;
+        padding: 10px 15px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        a {
+          text-decoration: none;
+          color: #000;
+          margin-left: 4rem;
+        }
+        a:hover {
+          color: $secondary-color;
+          transition: 0.3s ease-out;
+        }
+      }
+    }
+    .card:hover {
+      height: 530px;
+      .content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+      }
+    }
+  }
+}
 @import "_mobile";
